@@ -1,5 +1,19 @@
 #include <iostream>
 #include <pigpio.h>
+#include "MyClass.h"
+#include "B.h"
+
+
+class A
+{
+    public:
+    void Print()
+    {
+        std::cout << "A" << std::endl;
+    }
+
+};
+
 
 int main()
 {
@@ -21,6 +35,15 @@ int main()
     }
 
     gpioTerminate();
+
+    A a;
+    a.Print();
+
+    B b;
+    b.Print();
+    MyClass my;
+    my.printMyName();
+
 
     return 0;
 }
